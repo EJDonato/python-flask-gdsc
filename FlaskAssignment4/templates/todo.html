@@ -14,6 +14,7 @@
     <input type="text" name="task">
     <input type="submit">
 </form>
+
 <ul>
     <!-- 
         Use for loop jinja syntax to iterate over the `tasks`.
@@ -22,5 +23,8 @@
         that would render all previous tasks provided by the
         client.
     -->
+    {% for task in tasks %}
+        <li>{{ task }}</li>
+    {% endfor %}
 </ul>
 {% endblock %}

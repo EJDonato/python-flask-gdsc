@@ -33,6 +33,9 @@ def demon():
 # @app.route('___')
 # def ____():
 #     return _______
+@app.route('/angelMode')
+def angel():
+    return render_template('angel.html')
 
 # !!! Challenge 2: render html frog
 # 1. specify endpoint in app.route
@@ -44,6 +47,11 @@ def demon():
 # def ____():
 #     count = 10
 #     return render_template('____', frogCount=count)
+
+@app.route('/frog')
+def frog():
+    count = 10
+    return render_template('frog.html', frogCount=count)
 
 # !!! Challenge 3: render html elon
 # 1. specify endpoint in app.route
@@ -57,6 +65,11 @@ def demon():
 #     really = 1
 #     return render_template('____', romanSalute=really)
 
+@app.route('/elon')
+def elon():
+    really = 1
+    return render_template('elon.html', romanSalute=really)
+
 # !!! Challenge 4: render html wishlist
 # 1. specify endpoint in app.route
 # 2. name the function wishlist()
@@ -67,6 +80,11 @@ def demon():
 # def ____():
 #     wishlist = ['iphone', 'mac', 'macbook']
 #     return render_template('____', hilingKo=wishlist)
+
+@app.route('/wishlist')
+def wishlist():
+    wishlist = ['iphone', 'mac', 'macbook']
+    return render_template('wishlist.html', hilingKo=wishlist)
 
 # This ensures that the script is being run directly (not imported as a module).
 # When a Python file is executed, __name__ is set to "__main__".
